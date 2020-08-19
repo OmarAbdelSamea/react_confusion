@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Navbar, NavbarBrand } from 'reactstrap';
 import './index.css';
 import App from './App';
-import Hello from './Hello'
+import Hello from './Hello';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar dark color="info">
+      <div className="container">
+        <NavbarBrand href="/">React First</NavbarBrand>
+      </div>
+    </Navbar>
     <App />
-    <Hello />
   </React.StrictMode>,
   document.getElementById('root')
 );
