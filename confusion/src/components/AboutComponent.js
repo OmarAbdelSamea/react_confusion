@@ -1,13 +1,14 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from "../shared/baseUrl";
 
 function RenderLeader({ leaders }) {
     const leadersList = leaders.map((leader) => {
         return (
             <Media className="mb-5">
                 <Media className="mr-5" left>
-                    <Media src={leader.image} alt="Leader personal photo" />
+                    <Media src={baseUrl + leader.image} alt="Leader personal photo" />
                 </Media>
                 <Media body>
                     <Media heading>
@@ -83,7 +84,7 @@ function About(props) {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
-                    <RenderLeader leaders={props.leaders} />
+                    <RenderLeader leaders={props.leaders.leaders} />
                 </div>
             </div>
         </div>

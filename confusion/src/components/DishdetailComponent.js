@@ -92,8 +92,6 @@ class CommentForm extends Component {
             </>
         );
     }
-
-
 }
 
 function RenderDish({ dish }) {
@@ -149,7 +147,6 @@ function RenderComments({ comments, postComment, dishId }) {
         );
     }
 }
-
 
 const DishDetail = (props) => {
     if(props.isLoading) {
